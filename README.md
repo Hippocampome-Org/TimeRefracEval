@@ -1,4 +1,4 @@
-# TimeRefracEval
+# Izhikevich Model Refractory Period Evaluation Code
 
 This is software used to evaluate code used to create a refractory period (RP) in the Izhikevich model (IM) in code from (Venkadesh, et al., 2019; EA). It contains a concise version of the same code used to simulate the IM in that software. Methods used in this software will be applied to create the RP in the EA software.
 
