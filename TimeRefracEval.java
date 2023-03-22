@@ -1,4 +1,6 @@
 /* 
+    Author: Nate Sutton, 2023
+
     A concise code version of the Izhikevich model used in (Venkadesh, et al., 2019).
     This code is designed to allow testing and plotting a refractory period added to
     the neuron model.
@@ -35,7 +37,7 @@ public class TimeRefracEval {
     protected static double vPeak = 3.96;
     protected static double vMin = -54.95;
 
-    // experiment parameters
+    // Experiment parameters
     protected static float t_0 = 0; // initial time
     protected static float t_N = 1100; // end time
     protected static double appCurrent = 200; // current to apply
