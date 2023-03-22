@@ -34,3 +34,6 @@ Apache Commons Math libraries process IM results by returning V and U derivative
 Plotting the results with different parameters including RP time can help visually verify that the RP is causing the voltage changes that are expected.
 
 Specific conditions are included to help with the derivative control occuring at the right times and not wrong times. "t<=timeMax" is included to allow the RP to end once current is no longer supplied. This causes V to be able to go below vMin after that time which matches expected voltage activity better. "V0<vPeak" prevents the derivatives being set to 0 when V is at vPeak instead of vMin. Without this, V could remain at vPeak for the RP time.
+
+CARLsim version:<br>
+The results from the Java-based IM code can be compared to those from the C++-based CARLsim code. The CARLsim code is in the directory CARLsim_version. It has been tested to work with CARLsim6. The software includes a Matlab plotting script that can be used to create comparison plot with the Java version. Navigate to the iz_fp_eval directory to find a readme file for running that version.
