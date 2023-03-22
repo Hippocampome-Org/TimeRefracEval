@@ -1,4 +1,5 @@
 *.class
 *.csv
+*.jpg
 /CARLsim_version/iz_fp_eval/build_dir
 /CARLsim_version/iz_fp_eval/scripts/*.png

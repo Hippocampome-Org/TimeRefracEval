@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
 		sim.setNeuronParameters(neuron, atof(argv[1]), 0.0f, atof(argv[2]), 
 	    0.0f, atof(argv[3]), 0.0f, atof(argv[4]), 0.0f, atof(argv[5]), 0.0f, 
 	    atof(argv[6]), 0.0f, atof(argv[7]), 0.0f, atof(argv[8]), 0.0f, 
-	    atof(argv[9]), 0.0f, 150);
+	    atof(argv[9]), 0.0f, 0);
 		sim.connect(dummy, neuron, "one-to-one", 0.0f, SYN_FIXED); // CARLsim seems to require at least one connection. This is a dummy connection with no signaling to the other neuron.
 		sim.setNeuronMonitor(neuron,"DEFAULT");
 		sim.setIntegrationMethod(RUNGE_KUTTA4, 1);//40);
