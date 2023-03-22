@@ -27,15 +27,15 @@ import java.io.IOException;
 
 public class TimeRefracEval {
     // Izhikevich parameters
-    protected static double k = 0.37;
-    protected static double a = 0.001;
-    protected static double b = 0.01;
-    protected static double d = 7.0;
-    protected static double cM = 400.0;
-    protected static double vR = -70.53;
-    protected static double vT = -39.99;
-    protected static double vPeak = 3.96;
-    protected static double vMin = -54.95;
+    protected static double k = 0.62;
+    protected static double a = 0.005;
+    protected static double b = 11.69;
+    protected static double d = 3.0;
+    protected static double cM = 118.0;
+    protected static double vR = -58.53;
+    protected static double vT = -43.52;
+    protected static double vPeak = 11.48;
+    protected static double vMin = -49.52;
 
     // Experiment parameters
     protected static float t_0 = 0; // initial time
@@ -45,7 +45,7 @@ public class TimeRefracEval {
     protected static double timeMax = 1000; // current end time
     protected static double sS = 0.1;//0.01;//1; // step size
     public static final int SOMA_IDX = 0;
-    protected static double refrac_time = 1.0; // ms of refractory period
+    protected static double refrac_time = 150.0; // ms of refractory period
     protected static double last_spike_t = 0.0;
     protected static double v0=vR;
     protected static double u0=0;
@@ -93,7 +93,7 @@ public class TimeRefracEval {
             dy[0] = ((k * (V0 - vR) * (V0 - vT)) - U0 + appCurrentSoma) / cM;
             dy[1] = a * ((b * (V0 - vR)) - U0);
 
-            if (spike_detected && t-last_spike_t<=refrac_time && t<=timeMax && y[0] < 0) {
+            if (spike_detected && t-last_spike_t<=refrac_time && t<=timeMax && V0<vPeak) {
                 dy[0] = 0; dy[1] = 0;
             }
         }
