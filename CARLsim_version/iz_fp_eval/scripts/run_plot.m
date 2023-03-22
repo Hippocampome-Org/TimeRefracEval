@@ -1,0 +1,1 @@
+plot_results('../build_dir/results/n_neuron.dat', 'test');
